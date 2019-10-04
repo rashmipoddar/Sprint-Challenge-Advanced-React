@@ -3,6 +3,7 @@ import axios from 'axios';
 
 import './App.css';
 import Player from './components/Player';
+import NavBar from './components/NavBar';
 
 class App extends React.Component {
   state = {
@@ -25,7 +26,7 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <h1>Women's World Cup Player Ranks</h1>
+        <NavBar />
         {this.state.players.map(player => {
           return (
             <Player key={player.id} player={player}/>
